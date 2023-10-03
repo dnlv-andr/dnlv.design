@@ -56,4 +56,5 @@ button, input, select, textarea {
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   outline: 0; }
