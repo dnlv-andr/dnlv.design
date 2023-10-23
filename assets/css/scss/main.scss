@@ -168,7 +168,7 @@ body {
         transition-delay: 0;
         transition:
             border 0.76s ease,
-            opacity 0.32s linear,
+            opacity 0.32s ease,
             transform 0.4s ease;
     }
 }
@@ -356,7 +356,7 @@ footer {
 
         .anim-nav {
             opacity: 0;
-            transform: translate3d(0, 4rem, 0);
+            transform: translate3d(0, -4rem, 0);
         }
 
         &.opened {
@@ -375,11 +375,6 @@ footer {
 
             .contact-button {
                 opacity: 1;
-            }
-
-            .anim-nav {
-                opacity: 1;
-                transform: translate3d(0, 0, 0);
             }
         }
     }

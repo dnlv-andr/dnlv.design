@@ -440,7 +440,7 @@ body {
 }
 .header .anim-nav {
   transition-delay: 0;
-  transition: border 0.76s ease, opacity 0.32s linear, transform 0.4s ease;
+  transition: border 0.76s ease, opacity 0.32s ease, transform 0.4s ease;
 }
 
 /* =========================================================================
@@ -594,7 +594,7 @@ footer .policy a:hover {
   }
   .header .anim-nav {
     opacity: 0;
-    transform: translate3d(0, 4rem, 0);
+    transform: translate3d(0, -4rem, 0);
   }
   .header.opened {
     height: 48rem;
@@ -610,10 +610,6 @@ footer .policy a:hover {
   }
   .header.opened .contact-button {
     opacity: 1;
-  }
-  .header.opened .anim-nav {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
   .main-container {
     padding-top: 9.6rem;
