@@ -216,6 +216,7 @@
   stroke: #000004;
 }
 .case-item .label-watch span {
+  padding-top: 1px;
   transition: opacity 0.24s;
   opacity: 0;
   color: #ffffff;
@@ -492,6 +493,45 @@ footer .policy a:hover {
 }
 
 /* =========================================================================
+ *  Containers
+ * ========================================================================= */
+.text-page {
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.text-page.with-1200 {
+  width: 100%;
+  max-width: 120rem;
+  margin: auto;
+}
+.text-page.width-720 {
+  width: 100%;
+  max-width: 72rem;
+  margin: auto;
+}
+.text-page .title-section {
+  padding: 7.2rem 0 2.4rem;
+}
+.text-page .title-section .script-caption {
+  display: block;
+  padding-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.text-page .title-section .huge-title {
+  color: #ffffff;
+}
+.text-page .text-card {
+  padding: 5.6rem 4rem 3.8rem;
+}
+.text-page .text-card .main-caption {
+  padding-bottom: 0.8rem;
+}
+.text-page .last-card {
+  padding: 3.6rem 4rem 7.2rem;
+  color: #ffffff;
+}
+
+/* =========================================================================
  *  Responsive
  * ========================================================================= */
 @media screen and (max-width: 1023px) {
@@ -619,6 +659,22 @@ footer .policy a:hover {
   }
   .main-container.slided {
     transform: translate3d(0, 41.6rem, 0);
+  }
+  /* =========================================================================
+  *  Containers
+  * ========================================================================= */
+  .text-page .title-section {
+    padding: 0.8rem 0 3.6rem;
+  }
+  .text-page .title-section .script-caption {
+    padding-bottom: 0.6rem;
+  }
+  .text-page .text-card {
+    padding: 2.4rem 1.6rem 1.6rem;
+  }
+  .text-page .last-card {
+    padding: 2.4rem 1.6rem 0;
+    color: #ffffff;
   }
 }
 .homepage-main-container {

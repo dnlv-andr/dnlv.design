@@ -80,13 +80,8 @@ body {
                 background-color: $white;
                 transition: transform 0.48s ease;
             }
-    
-            &::before {
-                top: 1.1rem;
-            }
-            &::after {
-                top: 1.9rem;
-            }
+            &::before { top: 1.1rem; }
+            &::after  { top: 1.9rem; }
 
         }
 
@@ -226,6 +221,56 @@ footer {
         }
     }
 }
+
+
+/* =========================================================================
+ *  Containers
+ * ========================================================================= */
+
+
+.text-page {
+    flex-direction: column;
+    gap: .2rem;
+
+    &.with-1200 {
+        width: 100%;
+        max-width: 120rem;
+        margin: auto;
+    }
+
+    &.width-720 {
+        width: 100%;
+        max-width: 72rem;
+        margin: auto;
+    }
+
+    .title-section {
+        padding: 7.2rem 0 2.4rem;
+        .script-caption {
+            display: block;
+            padding-bottom: 1rem;
+            color: $white60;
+        }
+
+        .huge-title {
+            color: $white;
+        }
+    }
+
+    .text-card {
+        padding: 5.6rem 4rem 3.8rem;
+
+        .main-caption {
+            padding-bottom: 0.8rem;
+        }
+    }
+
+    .last-card {
+        padding: 3.6rem 4rem 7.2rem;
+        color: $white;
+    }
+}
+
 
 
 /* =========================================================================
@@ -387,6 +432,30 @@ footer {
 
         &.slided {
             transform: translate3d(0, 41.6rem, 0);
+        }
+    }
+
+
+    /* =========================================================================
+    *  Containers
+    * ========================================================================= */
+
+
+    .text-page {
+        .title-section {
+            padding: .8rem 0 3.6rem;
+            .script-caption {
+                padding-bottom: .6rem;
+            }
+        }
+
+        .text-card {
+            padding: 2.4rem 1.6rem 1.6rem;
+        }
+
+        .last-card {
+            padding: 2.4rem 1.6rem 0;
+            color: $white;
         }
     }
 
