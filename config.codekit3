@@ -36,6 +36,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/assets\/css\/scss\/homepage.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/scss\/homepage.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/css\/scss\/main.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -93,6 +108,38 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/fonts\/frn\/frn-400.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/frn\/frn-400.woff",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/frn\/frn-400.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/frn\/frn-400.woff2",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/hlv_now\/hlv_now-400.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/hlv_now\/hlv_now-400.woff2",
+      "oF" : 0
+    },
+    "\/assets\/fonts\/hlv_now\/hlv_now-700.woff2" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/fonts\/hlv_now\/hlv_now-700.woff2",
+      "oF" : 0
+    },
     "\/assets\/logo.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -102,6 +149,51 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/assets\/scripts.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/scripts-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/backups\/backup_22-10-23.zip" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/backups\/backup_22-10-23.zip",
+      "oF" : 0
+    },
+    "\/cases\/mindigital\/cover-image.png" : {
+      "ft" : 32768,
+      "iS" : 111541,
+      "oA" : 0,
+      "oAP" : "\/cases\/mindigital\/cover-image.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/cases\/nbu\/cover-image.png" : {
+      "ft" : 32768,
+      "iS" : 237592,
+      "oA" : 0,
+      "oAP" : "\/cases\/nbu\/cover-image.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
     },
     "\/home.html" : {
       "cB" : 0,

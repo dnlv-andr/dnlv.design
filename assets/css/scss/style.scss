@@ -1,3 +1,28 @@
+
+@font-face {
+    font-family: frn;
+    src: local(Franie),
+    url(../fonts/frn/frn-400.woff) format('woff'),
+    url(../fonts/frn/frn-400.woff2) format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: hlv_now;
+    src: local(Helvetica Now Display Regular),
+    local(HelveticaNowDisplay-Regular),
+    url(../fonts/hlv_now/hlv_now-400.woff2) format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: hlv_now;
+    src: local(Helvetica Now Display Bold),
+    local(HelveticaNowDisplay-Bold),
+    url(../fonts/hlv_now/hlv_now-700.woff2) format('woff2');
+    font-weight: 700;
+}
+
 @import 'vars';
 @import 'components';
 @import 'main';
+@import 'homepage';
