@@ -21,6 +21,21 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/css\/scss\/case.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/scss\/case.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/assets\/css\/scss\/components.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -180,6 +195,14 @@
       "oAP" : "\/backups\/backup_22-10-23.zip",
       "oF" : 0
     },
+    "\/case-template.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/case-template.html",
+      "oF" : 0
+    },
     "\/cases\/mindigital\/cover-image.png" : {
       "ft" : 32768,
       "iS" : 111541,
@@ -193,17 +216,17 @@
       "q" : 90,
       "rq" : 75
     },
-    "\/cases\/nbu\/cover-image.png" : {
-      "ft" : 32768,
-      "iS" : 237592,
+    "\/cases\/nbu\/cover-image.jpg" : {
+      "ft" : 16384,
+      "iS" : 494218,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/cases\/nbu\/cover-image.png",
+      "oAP" : "\/cases\/nbu\/cover-image.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
-      "q" : 90,
+      "q" : 100,
       "rq" : 75
     },
     "\/home.html" : {
