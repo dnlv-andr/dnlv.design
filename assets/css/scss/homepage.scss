@@ -38,6 +38,34 @@
  *  Responsive
  * ========================================================================= */
 
+@media screen and (min-width: 1640px) {
+    .homepage-main-container {
+        .about-text {
+            width: calc( 46% - 0.2rem );
+        }
+        .cases-list {
+            width: 64%;
+            flex-wrap: wrap;
+        }
+
+        // Cases cards stack
+        // =========================================================================
+        .cases-wrapper {
+            align-self: stretch;
+            flex-wrap: wrap;
+
+            &.vertical {
+                flex-direction: row;
+            }
+        }
+
+        .case-item {
+            flex: 0.5 0 0;
+            min-width: 40rem;
+        }
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .homepage-main-container {
         flex-direction: column;
@@ -45,16 +73,16 @@
         .container-column {
             height: calc( 50% - 0.4rem );
             width: 100%;
-
-            
         }
 
         .about-text { order: 2; }
         .cases-list { order: 1; }
+
     }
 }
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 679px),
+       screen and (max-width: 959px) and (orientation: landscape) {
     .homepage-main-container {
         height: auto;
 

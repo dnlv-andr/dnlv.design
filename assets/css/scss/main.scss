@@ -11,6 +11,10 @@ body {
     font-size: 1.6rem;
     font-family: $font-helvetica;
     font-feature-settings: 'ss02' on, 'ss08' on, 'ss07' on, 'ss06' on, 'ss01' on, 'ss04' on;
+
+    &.fixed {
+        overflow: hidden;
+    }
 }
 
 .main-container {
@@ -50,12 +54,22 @@ body {
     background-color: $white20;
     color: $white;
     transition:
+        transform 0.32s ease,
         background 0.24s linear,
         height 0.32s ease,
         padding 0.32s ease;
+    backdrop-filter: blur(4rem);
+
+    
+    &.fixed {
+        position: fixed;
+        border: .05rem solid $white20;
+        background-color: $black60;
+        transform: translateY(-10rem);
+    }
 
     &.header--case {
-        background-color: transparent;
+        background-color: $black60;
     }
 
 /*  Mobile controls
@@ -251,6 +265,7 @@ footer {
 
     .title-section {
         padding: 7.2rem 3.7rem 2.4rem;
+
         .script-caption {
             display: block;
             padding-bottom: 1rem;
@@ -282,9 +297,19 @@ footer {
  *  Responsive
  * ========================================================================= */
 
+@media screen and (max-width: 1231px) {
+    .header {
+        &.fixed {
+            top: 0.8rem;
+            left: 0.8rem;
+            right: 0.8rem;
+        }
+    }
+}
+
 @media screen and (max-width: 1023px) {
     .header {
-        background-color: transparent;
+        background-color: $white20;
         flex-wrap: wrap;
 
         .nav-toggle {
@@ -292,7 +317,7 @@ footer {
         }
 
         .nav-section {
-            flex: 1 0 0;
+            flex: 1 0 70%;
             order: 4;
             opacity: 0;
         }
@@ -329,22 +354,66 @@ footer {
     }
 }
 
-@media screen and (max-width: 679px) {
+
+@media screen and (max-width: 679px),
+       screen and (max-width: 959px) and (orientation: landscape) {
+
+    .main-container {
+        padding-top: 9.6rem;
+        padding-bottom: 1.6rem;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+        &.slided {
+            transform: translate3d(0, 41.6rem, 0);
+        }
+    }
+
+    // =========================================================================
+    // Containers
+    // ========================================================================= */
+
+    .container-start {
+        &.width-1200,
+        &.width-720 {
+            max-width: 63.2rem;
+        }
+    }
+
+    .text-page {
+        .title-section {
+            padding: .8rem 1.6rem 2.6rem;
+            .script-caption {
+                padding-bottom: .6rem;
+            }
+        }
+
+        .text-card {
+            padding: 2.4rem 1.6rem 1.6rem;
+        }
+
+        .last-card {
+            padding: 2.4rem 1.6rem 0;
+            color: $white;
+        }
+    }
+}
+
+
+@media screen and (max-width: 679px) and (orientation: portrait) {
     .header {
         flex-direction: column;
         flex-wrap: nowrap;
         height: 6.4rem;
         padding: 0.8rem 1.6rem;
-
         background-color: $black-s;
 
-        .fixed {
-            position: fixed;
-              top: auto;
-              bottom: 1.6rem;
+        &.fixed {
+            top: auto;
+            bottom: .8rem;
+            transform: translateY(0) !important;
         }
-
-          
+        
         .nav-toggle,
         .contact-button-mobile {
             position: absolute;
@@ -372,11 +441,12 @@ footer {
             right: 0.8rem;
         }
 
-       /*  Nav section
+    /*  Nav section
         * ========================================================================= */
 
         .nav-section {
             width: 100%;
+            visibility: hidden;
 
             .main-nav {
                 width: 100%;
@@ -417,7 +487,11 @@ footer {
                 top: 1.6rem;
                 left: 1.6rem;
             }
-    
+
+            .nav-section {
+                visibility: visible;
+            }
+
             .contact-button-mobile {
                 opacity: 0;
                 top: 24rem;
@@ -428,40 +502,7 @@ footer {
             }
         }
     }
-
-    .main-container {
-        padding-top: 9.6rem;
-        padding-bottom: 1.6rem;
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-
-        &.slided {
-            transform: translate3d(0, 41.6rem, 0);
-        }
+    footer {
+        padding-bottom: 8rem;
     }
-
-
-    /* =========================================================================
-    *  Containers
-    * ========================================================================= */
-
-
-    .text-page {
-        .title-section {
-            padding: .8rem 1.6rem 2.6rem;
-            .script-caption {
-                padding-bottom: .6rem;
-            }
-        }
-
-        .text-card {
-            padding: 2.4rem 1.6rem 1.6rem;
-        }
-
-        .last-card {
-            padding: 2.4rem 1.6rem 0;
-            color: $white;
-        }
-    }
-
 }

@@ -400,7 +400,6 @@
 }
 
 
-
 @media screen and (max-width: 1023px) {
 
     .main-card-title {
@@ -428,7 +427,8 @@
 }
 
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 679px),
+       screen and (max-width: 959px) and (orientation: landscape) {
     
     .radius-40 {
         border-radius: 3.2rem;

@@ -1,72 +1,288 @@
 .case__main-container {
-    .case__hero {
+    flex-direction: column;
+    gap: 8rem;
+
+    .case__hero,
+    .case__body {
         display: flex;
-        justify-content: flex-end;
-        padding: 6.4rem 0 8rem;
-        gap: .2rem;
+        gap: 0.2rem;
         align-self: stretch;
+        flex-wrap: wrap;
+    }
 
-        .case__hero--info-card,
-        .case__hero--cover-img {
-            width: calc( 50% - 0.1rem );
-            flex: 1 0 0;
-            align-self: stretch;
-            aspect-ratio: 1;
-            
+    .case__hero {
+        padding-top: 6.4rem;
+    }
+    .case__body {
+        padding-bottom: 8rem;
+    }
+
+    // Start case cards
+    // ============================================================================
+    .case-card {
+        display: flex;
+        flex-direction: column;
+
+        &.square { aspect-ratio: 1; }
+
+        &.normal {
+            flex: 1 0 45%;
+            max-width: calc( 50% - 0.1rem );
         }
 
-        .case__hero--info-card {
-            display: flex;
-            flex-direction: column;
-
-            .service-info {
-                display: flex;
-                align-items: center;
-                gap: 1.6rem;
-                padding: 3.6rem 4rem;
-                color: $black60;
-        
-                i.dot {
-                    display: block;
-                    width: 0.4rem;
-                    height: 0.4rem;
-                    border-radius: 50%;
-                    background-color: $black40;
-                }
-            }
-
-            .main-info {
-                flex: 1 0 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-                .title-section {
-                    padding: 0 3.7rem 2.5rem;
-                }
-                .descr-section {
-                    padding: 0 4rem;
-                }
-            }
-
-            .buttons-bar {
-                display: flex;
-                gap: 1.6rem;
-                padding: 0 4rem 4rem;
-
-                .button {
-                    flex: 1 0 0;
-                }
-            }
-        }
-
-        .case__hero--cover-img {
-            background-size: cover;
-            background-position: center;
+        &.big {
+            flex: 1 0 100%;
         }
     }
 
-    .main-content {
-        display: grid;
+    // Text cards
+    // ============================================================================
+    .case-card--text,
+    .case-card--black-card,
+    .case-card--cta {
+        justify-content: center;
+        padding: 4rem;
+
+        .huge-title,
+        .main-card-title {
+            padding-bottom: 2.5rem;
+        }
+
+        .plain-text:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .case-card--cta,
+    .case-card--text {
+        color: $black-s;
+    
+        .script-caption {
+            color: $black60;
+        }
+    }
+
+    .case-card--black-card {
+        color: $white;
+    
+        .script-caption {
+            color: $white60;
+        }
+    }
+
+    // Main CTA card design
+    // ============================================================================
+    .case-card--cta {
+        .service-info {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            color: $black60;
+        
+            i.dot {
+                display: block;
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 50%;
+                background-color: $black40;
+            }
+        }
+
+        .main-info {
+            flex: 1 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3.2rem 0 3.5rem;
+        }
+
+        .buttons-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+
+            .button {
+                flex: 1 0 20rem;
+            }
+        }
+    }
+
+    // Cover
+    // ============================================================================
+    .case-card--cover {
+        background-size: cover;
+        background-position: center;
+    }
+
+    // Photo cards
+    // ============================================================================
+    .case-card--title {
+        width: 100%;
+        color: $white;
+        margin: .8rem 0;
+        padding: 4rem;
+        border-top: .2rem solid $white;
+        border-bottom: .2rem solid $white;
+
+        &.align-left   { text-align: left; }
+        &.align-right  { text-align: right; }
+        &.align-center { text-align: center; }
+    }
+
+    // Photo cards
+    // ============================================================================
+    .case-card--photo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            align-self: stretch;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // 3 & 4 combo boxes
+    // ============================================================================
+    .case-card__combo-3,
+    .case-card__combo-4 {
+        flex: 1 0 100%;
+        display: flex;
+        flex-direction: row;
+        gap: .2rem;
+    }
+
+    .case-card__combo--photo {
+        flex: 1 0 0;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+
+/* =========================================================================
+ *  Responsive
+ * ========================================================================= */
+
+@media screen and (max-width: 1231px) {
+    .case__main-container {
+        gap: 4rem;
+
+        .case__hero {
+            padding-top: 0;
+        }
+        .case__body {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .case__main-container {
+        .case-card--text,
+        .case-card--black-card,
+        .case-card--cta {
+            padding: 1.6rem;
+
+            .huge-title,
+            .main-card-title {
+                padding-bottom: 1.8rem;
+            }
+        }
+
+        .case-card--text,
+        .case-card--black-card {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .case-card--cta {
+            .main-info {
+                padding: 2.4rem 0 2.8rem;
+            }
+            .service-info {
+                padding-top: 1.2rem;
+            }
+        }
+
+        // 3 & 4 combo boxes
+        // ============================================================================
+        .case-card__combo-3 {
+            flex-direction: column;
+
+            .case-card__combo--photo {
+                flex: auto;
+            }
+        }
+
+        .case-card__combo-4 {
+            flex-wrap: wrap;
+
+            .case-card__combo--photo {
+                flex: 1 0 45%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 679px),
+       screen and (max-width: 959px) and (orientation: landscape) {
+    .case__main-container {
+        .case__hero,
+        .case__body {
+            flex-direction: column;
+        }
+
+        .case-card {
+            &.normal {
+                flex: 1 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+
+        .case-card--title {
+            padding: 2.4rem 1.6rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 959px) and (orientation: landscape) {
+    .case__main-container {
+        .case__hero {
+            .case-card--cta   { order: 1; }
+            .case-card--cover { order: 2; }
+        }
+
+        .case-card {
+            &.normal {
+                min-height: 22rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 679px) and (orientation: portrait) {
+    .case__main-container {
+        .case__hero {
+            .case-card--cta   { order: 2; }
+            .case-card--cover { order: 1; }
+        }
+
+        .case-card {
+            &.normal {
+                min-height: calc( 100vw - 4.8rem );
+            }
+        }
     }
 }

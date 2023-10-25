@@ -14,17 +14,30 @@ function initCardAnimations() {
 initCardAnimations();
 
 
+// Toggling top bar on scroll
+const header = document.querySelector('.header');
+let lastScrollTop = 0;
 
-// Code for toggling top bar
-function toggleTopBar() {
-    const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+    const currentScrollTop = window.scrollY;
 
-    if (window.scrollY >= 600) {
+    if (currentScrollTop > 1) {
         header.classList.add('fixed');
-    } else {
+
+        if (currentScrollTop < lastScrollTop) {
+            header.style.transform = 'translateY(0%)';
+        } else {
+            header.style.transform = 'translateY(-10rem)';
+        }
+    } 
+    else {
         header.classList.remove('fixed');
+        header.style.transform = 'none'; // Reset the transform
     }
-}
+
+    lastScrollTop = currentScrollTop;
+});
+
 
 // Menu
 // ==================================================================
@@ -50,11 +63,13 @@ mainContainer.addEventListener('touchend', function(event) {
 }, false);
 
 function toggleMenu() {
+    const body = document.querySelector('body');
     const header = document.querySelector('.header');
     const navToggle = document.querySelector('.nav-toggle');
     const mainContainer = document.querySelector('.main-container');
     const navItems = Array.from(document.querySelectorAll('.header .anim-nav')).reverse();
 
+    body.classList.toggle('fixed');
     header.classList.toggle('opened');
     navToggle.classList.toggle('cross');
     mainContainer.classList.toggle('slided');
@@ -76,11 +91,13 @@ function toggleMenu() {
 
 // Code for collapsing when clicked outside
 document.addEventListener('click', function(event) {
+    const body = document.querySelector('.fixed');
     const header = document.querySelector('.header');
     const navToggle = document.querySelector('.nav-toggle');
     const mainContainer = document.querySelector('.main-container');
 
     if (!header.contains(event.target) && event.target !== navToggle) {
+        body.classList.remove('fixed');
         header.classList.remove('opened');
         navToggle.classList.remove('cross');
         mainContainer.classList.remove('slided');
@@ -91,6 +108,3 @@ document.addEventListener('click', function(event) {
 document.querySelector('.nav-toggle').addEventListener('click', function() {
     toggleMenu();
 });
-
-// Call toggleTopBar when the page is scrolled
-window.addEventListener('scroll', toggleTopBar);
