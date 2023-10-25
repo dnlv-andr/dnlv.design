@@ -61,9 +61,7 @@
     font-family: $font-franie;
     font-feature-settings: 'ss01' on;
     font-weight: 44;
-
-    text-transform: lowercase;
-    font-variant: small-caps;
+    text-transform: uppercase;
 }
  
 .huge-title {
@@ -194,10 +192,9 @@
     
     color: $black-s;
     text-decoration: none;
-    text-transform: uppercase;
 
     span {
-        font-size: 2.2rem;
+        font-size: 1.9rem;
         font-style: normal;
         line-height: 3.2rem;
         font-weight: 500;

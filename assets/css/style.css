@@ -60,8 +60,7 @@
   font-family: "frn", sans-serif;
   font-feature-settings: "ss01" on;
   font-weight: 44;
-  text-transform: lowercase;
-  font-variant: small-caps;
+  text-transform: uppercase;
 }
 
 .huge-title {
@@ -168,13 +167,12 @@
   transition: border 0.76s ease, background 0.76s ease, color 0.48s ease;
   color: #000004;
   text-decoration: none;
-  text-transform: uppercase;
 }
 .button:hover {
   transition: border 0.24s ease, background 0.24s ease, color 0.18s ease;
 }
 .button span {
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   font-style: normal;
   line-height: 3.2rem;
   font-weight: 500;
@@ -977,9 +975,6 @@ footer .policy a:hover {
   background-position: center;
 }
 .case__main-container .case-card--title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   margin: 0.8rem 0;
   padding: 4rem;
