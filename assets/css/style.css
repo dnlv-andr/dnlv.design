@@ -482,10 +482,10 @@ body.fixed {
   transition: transform 0.48s ease;
 }
 .header .nav-toggle .icon-menu-toggle::before {
-  top: 1.1rem;
+  top: 1rem;
 }
 .header .nav-toggle .icon-menu-toggle::after {
-  top: 1.9rem;
+  top: 1.8rem;
 }
 .header .nav-toggle.cross .icon-menu-toggle::before {
   transform: translate3d(0, 0.4rem, 0) rotate3d(0, 0, 1, 135deg);
@@ -1079,7 +1079,7 @@ footer .policy a:hover {
     width: 100%;
   }
   .case__main-container .case-card--title {
-    padding: 2.4rem 1.6rem;
+    padding: 2.4rem 1.6rem 2.2rem;
   }
 }
 @media screen and (max-width: 959px) and (orientation: landscape) {
