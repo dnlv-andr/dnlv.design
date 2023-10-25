@@ -64,8 +64,8 @@ body {
         background 0.24s linear,
         height 0.32s ease,
         padding 0.32s ease;
-    backdrop-filter: blur(4rem);
-    -webkit-backdrop-filter: blur(4rem);
+    backdrop-filter: blur(8rem);
+    -webkit-backdrop-filter: blur(8rem);
     
     &.fixed {
         position: fixed;
