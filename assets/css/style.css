@@ -167,6 +167,7 @@
   transition: border 0.76s ease, background 0.76s ease, color 0.48s ease;
   color: #000004;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .button:hover {
   transition: border 0.24s ease, background 0.24s ease, color 0.18s ease;
