@@ -400,6 +400,8 @@ html, body {
   font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   background-color: #000004;
 }
 
@@ -1079,7 +1081,7 @@ footer .policy a:hover {
     width: 100%;
   }
   .case__main-container .case-card--title {
-    padding: 2.4rem 1.6rem 2.2rem;
+    padding: 2.4rem 1.6rem;
   }
 }
 @media screen and (max-width: 959px) and (orientation: landscape) {
