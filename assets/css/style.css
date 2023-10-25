@@ -61,7 +61,6 @@
   font-feature-settings: "ss01" on;
   font-weight: 44;
   text-transform: uppercase;
-  vertical-align: middle;
 }
 
 .huge-title {
@@ -977,12 +976,15 @@ footer .policy a:hover {
   background-position: center;
 }
 .case__main-container .case-card--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
-  color: #ffffff;
   margin: 0.8rem 0;
   padding: 4rem;
   border-top: 0.2rem solid #ffffff;
   border-bottom: 0.2rem solid #ffffff;
+  color: #ffffff;
 }
 .case__main-container .case-card--title.align-left {
   text-align: left;
