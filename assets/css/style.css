@@ -1107,4 +1107,8 @@ footer .policy a:hover {
   .case__main-container .case-card.normal {
     min-height: calc(100vw - 4.8rem);
   }
+  .case__main-container .field-brief-card {
+    text-align: center;
+    justify-content: center;
+  }
 }
