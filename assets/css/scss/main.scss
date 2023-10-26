@@ -23,6 +23,15 @@ body {
     }
 }
 
+::-moz-selection {
+    color: $white;
+    background: $orange-50;
+}
+::selection {
+    color: $white;
+    background: $orange-50;
+}
+
 .main-container {
     width: 100%;
     padding: 11.2rem 1.6rem 0;
