@@ -108,3 +108,25 @@ document.addEventListener('click', function(event) {
 document.querySelector('.nav-toggle').addEventListener('click', function() {
     toggleMenu();
 });
+
+
+// Contact section
+document.addEventListener('DOMContentLoaded', function() {
+    const contactOpenBtns = document.querySelectorAll('.contact-open');
+    const contactSection = document.querySelector('.contact-section');
+    const bgFilter = document.querySelector('.contact__bg-filter');
+    const body = document.querySelector('body');
+    
+    contactOpenBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            contactSection.classList.add('show');
+            body.classList.add('fixed');
+        });
+    });
+
+    bgFilter.addEventListener('click', function() {
+        contactSection.classList.remove('show');
+        body.classList.remove('fixed');
+    });
+
+});

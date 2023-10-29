@@ -9,6 +9,27 @@
   ],
   "creatorBuild" : "34518",
   "files" : {
+    "\/assets\/contact-avatar.jpg" : {
+      "ft" : 16384,
+      "iS" : 23693,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/contact-avatar.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/cross.cur" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/cross.cur",
+      "oF" : 0
+    },
     "\/assets\/css\/reset.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -46,6 +67,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/css\/scss\/components.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/assets\/css\/scss\/contact.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/scss\/contact.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,

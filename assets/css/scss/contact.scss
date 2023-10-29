@@ -1,0 +1,163 @@
+.contact-section {
+    position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    visibility: hidden;
+
+    transition: visibility .5s ease;
+
+    .contact__bg-filter {
+        position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        background-color: $black60;
+        backdrop-filter: blur(8rem);
+        -webkit-backdrop-filter: blur(8rem);
+        z-index: 990;
+
+        opacity: 0;
+        transition: opacity .32s linear;
+        cursor: url('../cross.cur'), auto;
+    }
+
+    .contact__cards-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+        max-width: 57.2rem;
+        padding: 1.6rem;
+        width: 100%;
+        z-index: 991;
+
+        .my-contacts {
+            padding: 4rem;
+
+            .my-contacts-wrapper {
+                display: flex;
+                gap: 2.4rem;
+    
+                .avatar-box {
+                    width: 9.6rem;
+                    height: 9.6rem;
+                    overflow: hidden;
+                    border-radius: 50%;
+    
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+    
+                .info-section {
+                    .script-caption {
+                        display: block;
+                        padding-bottom: .6rem;
+                        color: $black60;
+                    }
+    
+                    .main-card-title {
+                        display: block;
+                        padding-bottom: .1rem;
+                    }
+    
+                    .plain-text {
+                        display: block;
+                        padding-bottom: 1.7rem;
+                        
+                        a {
+                            color: $black-s;
+                            text-decoration: underline;
+                        }
+                    }
+    
+                    .socials-box {
+                        display: flex;
+                        gap: .4rem;
+    
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 4.8rem;
+                            height: 4.8rem;
+    
+                            border-radius: 50%;
+                            background-color: $black-s;
+                            transition: background .24s ease;
+    
+                            &:hover {
+                                background: $black60;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .brief-card {
+            padding: 3.5rem 4rem 4rem;
+
+            .main-caption {
+                display: block;
+                padding-bottom: .2rem;
+            }
+
+            .script-caption {
+                display: block;
+                padding-bottom: 3.5rem;
+                color: $black60;
+            }
+        }
+    }
+
+    &.show {
+        visibility: visible;
+
+        .contact__bg-filter {
+            opacity: 1;
+        }
+    
+        .contact__cards-box {
+            .cont-anim {
+                transition-delay: .24s;
+                opacity: 1;
+                transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 679px),
+       screen and (max-width: 959px) and (orientation: landscape) {
+
+    .contact-section {
+        .contact__cards-box {
+            .my-contacts {
+                padding: 4rem 1.6rem;
+    
+                .my-contacts-wrapper {
+                    flex-direction: column;
+                    gap: 1.6rem;
+                }
+            }
+    
+            .brief-card {
+                padding: 3.5rem 1.6rem 4rem;
+                .script-caption {
+                    padding-bottom: 3.2rem;
+                }
+            }
+        }
+    }        
+}
